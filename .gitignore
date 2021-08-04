@@ -1,3 +1,2 @@
 *.SAFE
-isd-lite/
-isd-summary/
+isd/*
