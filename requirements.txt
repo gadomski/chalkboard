@@ -1,0 +1,6 @@
+adlfs==22.11.2
+geopandas==0.12.1
+ipykernel==6.18.2
+planetary-computer==0.4.9
+pyarrow==10.0.1
+pystac-client==0.5.1
