@@ -1,0 +1,26 @@
+# Copyright ©2021. Element 84, Inc. All Rights Reserved.
+version: "3"
+services:
+  notebook:
+    build: .
+    container_name: notebook
+    image: matthewhanson/geoliath
+    env_file: .env
+    volumes:
+      - ./:/work
+    ports:
+      - 18888:18888
+    entrypoint: |
+      jupyter notebook --notebook-dir=/work/notebooks --no-browser --ip=0.0.0.0 --port=18888
+  titiler:
+    container_name: titiler
+    image: ghcr.io/developmentseed/titiler:latest
+    env_file: .env
+    environment:
+      - HOST=0.0.0.0
+      - WORKERS_PER_CORE=1
+      - PORT=8000
+    volumes:
+      - ./:/work
+    ports:
+      - 8000:8000
