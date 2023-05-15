@@ -1,8 +1,12 @@
 adlfs
+cartopy
 geopandas
 h5netcdf
 ipykernel
+matplotlib
 planetary-computer
 pyarrow
 pystac-client
+shapely
+stactools
 xarray

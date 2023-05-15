@@ -1,1 +1,2 @@
 pip-tools~=6.12
+pre-commit~=3.3
